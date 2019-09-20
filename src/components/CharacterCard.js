@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function CharacterCard() {
-  return <span>todo: character</span>;
+export default function CharacterCard(props) {
+  // console.log(props.character)
+  
+  return <span>{props.character.name} <br /></span>;
 }
