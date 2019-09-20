@@ -4,6 +4,7 @@ import Header from "./components/Header.js";
 import LocationCard from "./components/LocationCard";
 import CharacterPage from "./components/CharacterPage";
 import WelcomePage from "./components/WelcomePage";
+import SearchForm from "./components/SearchForm";
 
 
 export default function App() {
@@ -18,12 +19,17 @@ export default function App() {
           <Link to="/character">Character Page</Link>
         </li>
         {/* <li>
+        <Link to="/search">Search</Link>
+        </li> */}
+        {/* <li>
           <Link to="/location">Location Page</Link>
         </li> */}
       </ul>
-
+      
       <Route path="/home" component={WelcomePage} />
-      <Route path="/character" component={CharacterPage} />
+      <Route exact path="/character" component={CharacterPage} />
+      <Route exact path="/search" component={SearchForm} />
+
       {/* <Route path="/location/" component={LocationCard} /> */}
     </>
   );
