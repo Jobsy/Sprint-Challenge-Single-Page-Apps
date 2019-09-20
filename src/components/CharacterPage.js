@@ -4,13 +4,11 @@ import CharacterList from "./CharacterList";
 import SearchForm from "./SearchForm";
 
 
-
 export default function CharacterPage() {
   return (
     <section className="welcome-page">
       <header>
         <h1>Welcome to the Character Page!</h1>
-        {/* <SearchForm /> */}
         <Link to="/search">Search</Link>
         <Route exact path="/search" component={SearchForm} />
         <CharacterList />

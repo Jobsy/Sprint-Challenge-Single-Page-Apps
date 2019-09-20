@@ -18,19 +18,11 @@ export default function App() {
         <li>
           <Link to="/character">Character Page</Link>
         </li>
-        {/* <li>
-        <Link to="/search">Search</Link>
-        </li> */}
-        {/* <li>
-          <Link to="/location">Location Page</Link>
-        </li> */}
       </ul>
-      
+
       <Route path="/home" component={WelcomePage} />
       <Route exact path="/character" component={CharacterPage} />
       <Route exact path="/search" component={SearchForm} />
-
-      {/* <Route path="/location/" component={LocationCard} /> */}
     </>
   );
 }
