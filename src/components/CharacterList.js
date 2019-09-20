@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import CharacterCard from "./CharacterCard";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-  const [character, setCharacter] = useState([]);
+  const [characters, setCharacter] = useState({ results: []});
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -19,10 +20,13 @@ export default function CharacterList() {
       console.log(err)
     })
   }, []);
-console.log("cccc: ", character)
+console.log("cccc: ", characters)
   return (
     <section className="character-list">
       <h2>TODO: `array.map()` over your state here!</h2>
+      {characters.results.map(character => (
+       <CharacterCard character={character} />
+      ))}
     </section>
   );
 }
