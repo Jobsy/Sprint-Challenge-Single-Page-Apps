@@ -23,7 +23,7 @@ export default function CharacterList() {
 console.log("cccc: ", characters)
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      <h2>Fan Page Members</h2>
       {characters.results.map(character => (
        <CharacterCard character={character} />
       ))}
