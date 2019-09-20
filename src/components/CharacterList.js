@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from 'axios';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -11,7 +12,7 @@ export default function CharacterList() {
     .get("https://rickandmortyapi.com/api/character")
     .then(res => {
       console.log("rrrr: ", res)
-      console.log("rrrr: ", res.data)
+      console.log("ddd: ", res.data)
       setCharacter(res.data)
     })
     .catch(err => {
