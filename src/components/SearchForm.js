@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { InputStyle } from "./style";
+
 
 
 export default function SearchForm() {
@@ -24,7 +26,7 @@ export default function SearchForm() {
   return (
     <section className="search-form">
       <h3>Search tthrough Character Page</h3>
-      <input type="text" onChange={e => setQuery(e.target.value)} />
+      <InputStyle type="text" onChange={e => setQuery(e.target.value)} />
       <br />
       {data.results.map(data2 => (
         <ul>
