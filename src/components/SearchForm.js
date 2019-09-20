@@ -8,7 +8,7 @@ export default function SearchForm() {
 
 
   useEffect(() => {
-    
+    const fetchData = () => {
    axios
     .get("https://rickandmortyapi.com/api/character/?name=" + query)
     .then(res => {
@@ -19,6 +19,8 @@ export default function SearchForm() {
     .catch(err => {
       console.log(err)
     })
+  };
+  fetchData();
   }, [query]);
 console.log("cccc22222: ", data)
 
