@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import CharacterCard from "./CharacterCard";
+import LocationCard from "./LocationCard";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -25,7 +26,9 @@ console.log("cccc: ", characters)
     <section className="character-list">
       <h2>Fan Page Members</h2>
       {characters.results.map(character => (
+        
        <CharacterCard character={character} />
+      
       ))}
     </section>
   );
